@@ -1,0 +1,41 @@
+/*Variable pour couleurs*/
+$colors: (
+    white: #ffffff,
+    black: #000000,
+    pink: #e96188,
+    green: #46863D
+);
+
+/* Variable pour tailles des fonts*/
+$font-size: (
+    paragraph: 16px,
+    h1: 51.2px,
+    h2: 32px,
+    h3: 25px,
+    span: 64px
+);
+/* Variable pour les fonts*/
+$font: (
+    paragraph: 'sans-serif',
+    h1: 'Verdana'
+);
+
+p {
+    font-size: map-get($map: $font-size, $key: paragraph);
+    color: map-get($map: $colors, $key: pink );
+    font-family: map-get($map: $font, $key: paragraph);
+};
+
+h1 {
+    font-size: map-get($map: $font-size, $key: h1);
+    color: map-get($map: $colors, $key: green );
+    font-family: map-get($map: $font, $key: h1);
+};
+
+h2 {
+    font-size: map-get($map: $font-size, $key:h2 );
+};
+
+h3 {
+    font-size: map-get($map: $font-size, $key:h3 );
+}
