@@ -1,3 +1,10 @@
+@function color($color-name, $color-variant: null) {
+    @if ($color-variant != null) {
+      @return map-get(map-get($colors, $color-name), $color-variant);
+    } @else {
+      @return map-get($colors, $color-name);
+    }
+  }
 $colors: (
     base: (
         light: hsl(0, 0%, 100%),
@@ -12,12 +19,11 @@ $colors: (
     color-map-gray: (
         level-1: rgb(248, 248, 248),
         level-2: rgb(239, 239, 239),
-        level-3: rgb(204, 204, 204, 1),
+        level-3: rgb(204, 204, 204),
         level-4: rgb(118, 118, 118)
     )
 
-)
-
+);
 
 
 

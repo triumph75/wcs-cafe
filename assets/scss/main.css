@@ -20,4 +20,9 @@ h2 {
 h3 {
   font-size: 25px;
 }
+
+.banner-container {
+  background-image: url(../img/banner-background.jpg);
+  color: white;
+}
 /*# sourceMappingURL=main.css.map */
